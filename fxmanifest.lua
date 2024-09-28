@@ -1,8 +1,8 @@
 fx_version 'cerulean'
 game 'gta5'
 lua54 'yes'
-author 'Kakarot'
-description 'Allows players quick access to a menu for various actions'
+author 'De-V-aLtu'
+description 'Quick access menu'
 version '1.2.0'
 
 ui_page 'html/index.html'
