@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+h1 {
+    font-weight: normal;
+    color: white;
+}
+
+div.info {
+    margin: 12px 0;
+}
+
+div.info * {
+    color: white;
+}
+
+#icons {
+    display: none;
+    filter: url(#drop-shadow);
+}
+
+.container {
+    position: absolute;
+    left: 1000px;
+}
+
+#vehicle {
+    fill: white;
+}
+
+div.menuHolder {
+    user-select: none;
+    -moz-user-select: none;
+    position: fixed; /* Keep it fixed in view */
+    right: 10px; /* Position the menu to the right of the screen */
+    top: 50%; /* Center vertically (adjust if needed) */
+    transform: translateY(-50%); /* Center vertically */
+    color: #08C098;
+    /* text-shadow: 0px 0px 10.4px rgba(8, 192, 152, 0.86); Glow effect for the menu holder */
+}
+
+svg.icons {
+    display: none;
+}
+
+svg.menu {
+    position: absolute;
+    overflow: visible;
+    transition: 0.1s;
+    transform: scale(0.8); /* Slightly larger scale */
+
+    transition-timing-function: ease-out;
+}
+
+svg.menu.inner {
+    transform: scale(0.66) rotate(-10deg);
+    opacity: 0;
+    visibility: hidden;
+}
+
+svg.menu.outer {
+    opacity: 0;
+    visibility: hidden;
+}
+
+svg.menu > g > path {
+    fill: rgb(23 23 23 / 65%);
+}
+
+svg.menu > g.sector > path {
+    cursor: pointer;
+}
+
+svg.menu > g.sector > text,
+svg.menu > g.sector > use {
+    font-family: "Poppins", sans-serif;
+    margin-top: 5px;
+    font-size: 2.8px;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    fill: white;
+}
+
+svg.menu > g.sector:hover > path {
+    fill: #028a76; /* Darker shade of the theme color for selected sectors */
+    fill-opacity: 0.7;
+    stroke: #04FFC7; /* Border color */
+    stroke-width: 0.5px; /* Thickness of the border */
+    filter: drop-shadow(0px 0px 8px rgba(2, 138, 118, 0.8)) drop-shadow(0px 0px 16px rgba(2, 138, 118, 0.6)); /* Darker glowing effect */
+    transform: scale(1.1); /* Slightly larger scale for pop-up effect */
+    transition: transform 0.2s ease-out, fill 0.2s ease-out, stroke 0.2s ease-out; /* Smooth transition for scaling, fill color, and border */}
+
+svg.menu > g.center:hover > circle {
+    fill: #028a76; /* Darker shade of the theme color for selected sectors */
+    fill-opacity: 0.7;
+    stroke: #04FFC7; /* Border color */
+    stroke-width: 0.5px; /* Thickness of the border */
+    filter: drop-shadow(0px 0px 8px rgba(2, 138, 118, 0.8)) drop-shadow(0px 0px 16px rgba(2, 138, 118, 0.6)); /* Darker glowing effect */
+    transform: scale(1.1); /* Slightly larger scale for pop-up effect */
+    transition: transform 0.2s ease-out, fill 0.2s ease-out, stroke 0.2s ease-out; /* Smooth transition for scaling, fill color, and border */}
+
+svg.menu > g.center > circle {
+    cursor: pointer;
+    fill: rgb(23 23 23 / 80%);
+}
+
+svg.menu > g.center > text,
+svg.menu > g.center > use {
+    margin-top: 5px;
+    font-size: 2.5px;
+    cursor: pointer;
+    fill: white;
+}
